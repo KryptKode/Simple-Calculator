@@ -1,0 +1,48 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="399.5" Width="270">
+    <Grid HorizontalAlignment="Center" Margin="0,0,0,0" Width="250" RenderTransformOrigin="0.505,0.525">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="157*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="220" Margin="10,93,0,0" VerticalAlignment="Top" Width="230" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="1" Width="50" Height="50" FontSize="36" Grid.Column="0" Grid.Row="2" Click="BtnEntry_Click"/>
+            <Button Content="2" Width="50" Height="50" FontSize="36" Grid.Column="1" Grid.Row="2" Click="BtnEntry_Click"/>
+            <Button Content="3" Width="50" Height="50" FontSize="36" Grid.Column="2" Grid.Row="2" Click="BtnEntry_Click"/>
+            <Button Content="4" Width="50" Height="50" FontSize="36" Grid.Column="2" Grid.Row="1" Click="BtnEntry_Click"/>
+            <Button Content="5" Width="50" Height="50" FontSize="36" Grid.Column="1" Grid.Row="1" Click="BtnEntry_Click"/>
+            <Button Content="6" Width="50" Height="50" FontSize="36" Grid.Column="0" Grid.Row="1" Click="BtnEntry_Click"/>
+            <Button Content="7" Width="50" Height="50" FontSize="36" Grid.Column="2" Grid.Row="0" Click="BtnEntry_Click"/>
+            <Button Content="8" Width="50" Height="50" FontSize="36" Grid.Column="1" Grid.Row="0" Click="BtnEntry_Click"/>
+            <Button Content="9" Width="50" Height="50" FontSize="36" Grid.Column="0" Grid.Row="0" Click="BtnEntry_Click"/>
+            <Button Content="0" Width="50" Height="50" FontSize="36" Grid.Column="1" Grid.Row="3" Click="BtnEntry_Click"/>
+            <Button Content="C" Width="50" Height="50" FontSize="36" Grid.Column="0" Grid.Row="3" Click="BtnClear_Click"/>
+            <Button Content="*" Width="50" Height="50" FontSize="36" Grid.Column="3" Grid.Row="1" Click="BtnMultiply_Click"/>
+            <Button Content="/" Width="50" Height="50" FontSize="36" Grid.Column="3" Grid.Row="0" Click="BtnDivide_Click"/>
+            <Button Content="-" Width="50" Height="50" FontSize="36" Grid.Column="3" Grid.Row="2" Click="BtnSubtract_Click"/>
+            <Button Content="+" Width="50" Height="50" FontSize="36" Grid.Column="3" Grid.Row="3" Click="BtnAdd_Click"/>
+            <Button Content="=" Width="50" Height="50" FontSize="36" Grid.Column="2" Grid.Row="3" Click="BtnEquals_Click"/>
+        </Grid>
+        <TextBlock x:Name="ValuesTextBox" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="24" Background="LightGray" Grid.ColumnSpan="2" Height="31" Width="230"><LineBreak/><LineBreak/></TextBlock>
+        <TextBlock x:Name="SolutionTextBlock" HorizontalAlignment="Left" Margin="10,46,0,0" TextWrapping="NoWrap"  Background="LightGreen" FontSize="32" FontWeight="Bold" VerticalAlignment="Top" Height="42" Width="230" Grid.ColumnSpan="2">
+        </TextBlock>
+    </Grid>
+</Window>
